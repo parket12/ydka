@@ -25,10 +25,12 @@ def koren(a):
         return "Ошибка: невозможно извлечь квадратный корень из отрицательного числа"
 
 def factorial(a):
-    if a >= 0:
-        return math.factorial(a)
+    if a == 0 or a == 1:
+        return 1
+    elif a<0:
+        print("Ошибка, введите положительное число")
     else:
-        return "Ошибка: невозможно вычислить факториал отрицательного числа"
+        return a * factorial(a-1)
 
 def sine(a):
     return math.sin(math.radians(a))
